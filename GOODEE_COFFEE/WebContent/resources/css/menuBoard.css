@@ -1,0 +1,135 @@
+/*************************************************************
+   메뉴관리
+*************************************************************/
+
+main{padding-left: 60px; padding-top: 60px;height:100%;}
+#category{width: 20%; height:100%; float:left; box-sizing:border-box; overflow: auto;}
+.menu_setting{width: 80%; height:20%; float:left; overflow: auto;}
+/* -----------------------카테고리목록-------------------------- */
+
+#tabs{
+  overflow:hidden;
+  width: 100%;
+  margin: 0;padding: 0;
+}
+#tabs li{float: left; width: 50%; height:60px; text-align:center;}
+
+#tabs a{
+  width:100%; height:100%;
+  position: relative;
+  background: #ddd;  
+  float: left;
+  text-decoration: none;
+  color: #444;
+  line-height:60px;
+
+}
+
+#tabs a:hover,
+#tabs a:hover::after,
+#tabs a:focus,
+#tabs a:focus::after{
+  background: #fff;
+}
+
+#tabs a:focus{
+  outline: 0;
+}
+
+#tabs #current a,
+#tabs #current a::after{
+  background: #fff;
+  z-index: 3;
+}
+
+#content #tab1 button{ width:60px; border:0; background-color:white; border:1px solid #2D3e50; border-radius:6px; outline-color:#f1c40f; }
+#content #tab1 button.correct{ margin-left:10px; }
+#content #tab1 button.delete{ color:red; }
+/* -----------------------카테고리추가-------------------------- */
+
+#content
+{	
+	width:100%;
+    background: #fff;
+ 	height:100vh;
+	z-index: 2;	
+    -moz-box-shadow: 2px -2px 3px -2px rgba(0, 0, 0, .5);
+    -webkit-box-shadow: 2px -2px 3px -2px rgba(0, 0, 0, .5);
+    box-shadow: 2px -2px 3px -2px rgba(0, 0, 0, .5);
+}
+#content ul li{
+	width:100%; height:50px; line-height:50px;padding:0 0.5em;
+	box-sizing: border-box;
+}
+#content div#tab1{width:100%;height:100%;}
+#content div#tab2{text-align:center; padding-top:10%;width:100%;height:100%;}
+#content div#tab2 input#categoryInsertText {width : 80%;}
+
+.category_sub{ float:right; color:#C1392B; margin-right:10px; cursor:pointer; }
+/* -------------------------메뉴컨텐츠------------------------ */
+.menu_title{
+	width:100%;  height:60px;  background: #ddd;  line-height:60px;
+	padding: 0 10px; box-sizing: border-box;
+}
+.catagory_title{float:left;}
+.menu_add, .menu_sub{float:right; color:#C1392B; margin-right:10px; cursor:pointer;}
+.menu_sub #deleteButton{border:none; background-color:transparent; color:#C1392B; font-size:16px; cursor:pointer;}
+.menu_contents{
+	width:100%; height:auto; box-sizing: border-box;
+
+}
+.menu_contents ul {height : fit-content;}
+.menu_contents ul:after {display: block; content: ""; clear: left;}
+.menu_contents ul li{
+	width: 15%;  height:60px;
+	float: left;
+	margin: 2%;
+	background: #F1C40F;
+	border-radius: 5px;
+	text-align:center;
+	line-height:60px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+}
+
+.menuList{ position:relative; }
+.menuList > .menuSubChk{ position:absolute; width:20px; height:20px; left:-24px; top:20px;  } 
+
+/*---------------------------- 팝업(메뉴 추가) ----------------------------------*/
+div#pop{ width: 600px; height: 400px; margin: 100px auto; background-color: #2D3e50; box-sizing: border-box; border:5px solid #2D3e50; position:fixed; top:100px; left:30%; display:none; }
+
+div#pop h1{ width: 100%; height: 50px; line-height: 50px; background-color: white; color: #2D3e50; text-align: center;}
+
+div#pop p.inputBox{ margin: 30px 40px;}
+
+div#pop p.inputBox{display: block; content: ""; clear: left; height: 40px;}
+
+div#pop p.inputBox label{ display: inline-block; width: 100px; color: white; height: 40px; line-height: 40px; float: left;}
+
+//div#pop p.inputBox select,input{ height: 40px; width: 400px; box-sizing: border-box; padding: 10px; outline-color: #f1c40f;}
+div#pop p.inputBox select, div#pop p.inputBox input{ height: 40px; width: 400px; box-sizing: border-box; padding: 10px; outline-color: #f1c40f;}
+
+div#pop button.menuRegiBtn{ width: 510px; height: 60px;background-color: #c1392b; color: white; margin-left: 40px; border: none; border-radius: 6px; font-size:20px;}
+
+
+button.closePop {float: right; width: 50px; border: 0; height: 50px; position: relative; bottom: 50px; cursor: pointer;}
+
+
+
+/*--------------------------------*/
+.chkMenu{ display:none; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

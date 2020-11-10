@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee https://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+	<!-- The definition of the Root Spring Container shared by all Servlets and Filters -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>/WEB-INF/spring/root-context.xml</param-value>
+	</context-param>
+	
+	<!-- Creates the Spring Container shared by all Servlets and Filters -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
+	<!-- Processes application requests -->
+	<servlet>
+		<servlet-name>appServlet</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>/WEB-INF/spring/appServlet/servlet-context.xml</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+		
+	<servlet-mapping>
+		<servlet-name>appServlet</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+	
+	<!-- Processes application requests -->
+	<servlet>
+		<servlet-name>loginServlet</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>/WEB-INF/spring/appServlet/login-context.xml</param-value>
+		</init-param>
+		<load-on-startup>2</load-on-startup>
+	</servlet>
+		
+	<servlet-mapping>
+		<servlet-name>loginServlet</servlet-name>
+		<url-pattern>/login/*</url-pattern>
+	</servlet-mapping>
+	
+	<!-- Processes application requests -->
+	<servlet>
+		<servlet-name>staffServlet</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>/WEB-INF/spring/appServlet/staff-context.xml</param-value>
+		</init-param>
+		<load-on-startup>3</load-on-startup>
+	</servlet>
+		
+	<servlet-mapping>
+		<servlet-name>staffServlet</servlet-name>
+		<url-pattern>/staff/*</url-pattern>
+	</servlet-mapping>
+	
+	<!-- Processes application requests -->
+	<servlet>
+		<servlet-name>memberServlet</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>/WEB-INF/spring/appServlet/member-context.xml</param-value>
+		</init-param>
+		<load-on-startup>4</load-on-startup>
+	</servlet>
+		
+	<servlet-mapping>
+		<servlet-name>memberServlet</servlet-name>
+		<url-pattern>/member/*</url-pattern>
+	</servlet-mapping>
+	
+	<!-- Processes application requests -->
+	<servlet>
+		<servlet-name>paymentServlet</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>/WEB-INF/spring/appServlet/payment-context.xml</param-value>
+		</init-param>
+		<load-on-startup>5</load-on-startup>
+	</servlet>
+		
+	<servlet-mapping>
+		<servlet-name>paymentServlet</servlet-name>
+		<url-pattern>/payment/*</url-pattern>
+	</servlet-mapping>
+	
+	<!-- Processes application requests -->
+	<servlet>
+		<servlet-name>salesListServlet</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>/WEB-INF/spring/appServlet/salesList-context.xml</param-value>
+		</init-param>
+		<load-on-startup>6</load-on-startup>
+	</servlet>
+		
+	<servlet-mapping>
+		<servlet-name>salesListServlet</servlet-name>
+		<url-pattern>/salesList/*</url-pattern>
+	</servlet-mapping>
+	
+	<!-- Processes application requests -->
+	<servlet>
+		<servlet-name>menuServlet</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>/WEB-INF/spring/appServlet/menu-context.xml</param-value>
+		</init-param>
+		<load-on-startup>7</load-on-startup>
+	</servlet>
+		
+	<servlet-mapping>
+		<servlet-name>menuServlet</servlet-name>
+		<url-pattern>/menu/*</url-pattern>
+	</servlet-mapping>
+
+</web-app>

@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+
+form#closeFrm{ width: 1000px; height: 1400px; margin: 100px auto; background-color: #2D3e50; padding: 30px; box-sizing: border-box; border-radius: 10px; box-shadow: 10px 10px 3px #f1c40f;}
+
+#closeFrm h1{ background-color: #f1c40f; height: 80px; line-height: 80px; margin: 10px 0 20px;
+     text-align: center; border-radius: 10px; box-shadow: 1px 1px 1px white;}
+       
+#closeFrm table{ border-collapse: collapse; color: white; border: 1px solid white;
+width: 430px; height: 200px; }
+#closeFrm table th,td{ box-sizing: border-box; padding: 10px;}
+
+form#closeFrm h2{ margin: 10px 0; background-color: #f1c40f; width: 430px; height: 50px; line-height: 50px; text-align-last: center; border-radius: 10px; box-shadow: 1px 1px 1px white;}  
+
+#left_col{ float: left;}
+#right_col{ float: right;}
+div#openBox{ margin: 50px 0; }
+div#closeBox{ margin: 50px 0; }
+div#chargeHistory{ margin: 50px 0; }
+div#cashType{ margin: 50px 0 0 50px;}
+
+table#cashTable th,td{ box-sizing: border-box; padding: 10px; height: 46px;}
+
+
+
+#closeFrm  div#keypad{ width: 440px; background-color: #2D3e50; float: left; margin-left:42px; margin-top: 50px; border-radius: 6px; box-sizing: border-box; padding: 5px; font-weight: bold; font-size: 24px;}
+
+#closeFrm  #keypad > [class*=keypad]{ width:96px; height: 56px; background-color: #2D3e50; float: left; border: 2px solid white; margin-left: 6px; margin-bottom: 5px; line-height: 50px; text-align: center; border-radius: 5px; color: white;}
+
+#closeFrm  #keypad  #keypad_enter{ background-color:#2D3e50; }
+
+button#closeSubmit
+{  width: 98%; background-color: #c1392b; margin-top: 10px;  height: 140px; border-radius:10px; border: 2px solid white; color: white; font-size: 40px;}
+
+

@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+*{ margin: 0; padding: 0;border-radius: 0;box-sizing: border-box; }
+ul,ol,li{ list-style: none; }
+a{text-decoration: none; outline: 0; }
+caption{overflow:hidden;width:0;height:0;font-size:0;line-height:0;text-indent:-999em}
+fieldset{border:0}
+legend{height:0;visibility:hidden}
+em,address{font-style:normal}
+img{border:0 none;vertical-align:middle}
+button{cursor:pointer;}
+
+/*헤더*/
+header{
+    width: 100%; z-index: 99; height: 60px; 
+    box-sizing: border-box;background-color: #2D3E50;position:fixed;
+	left:0; top:0;border-bottom:1px solid #ddd;
+}
+#header_wrapper{padding:15px;}
+#logo_image{float: left;}
+#title{float: left;}
+#header_wrapper > p{float:right; display: inline-block;}
+#header_wrapper > button{
+	float:right; margin-left:10px;
+	background-color:rgb(201, 201, 201);color:black;border:none; outline:none;
+	border-radius:5px; padding:2px;
+}
+#header_wrapper #login_date{margin-right: 10px;}
+#header_wrapper{color: white;}
+
+/*gnb*/
+nav#gnb{
+	width:60px; height:100%;background-color: #2D3E50;
+	box-sizing: border-box; position:fixed; overflow:hidden;
+	z-index:1;padding-top:60px; border-right:1px solid #ddd;
+}
+#gnb ul li{
+	width:60px; height:60px; padding:2px;text-align:center; border-bottom:1px solid silver;overflow:hidden;}
+#gnb ul li i{color: white;font-size:20px;margin-top:10px;}
+#gnb ul li span{display:block;color: white; font-size:12px;margin-top:2px;}
+
+#gnb ul li:hover{background-color:#C1392B;}

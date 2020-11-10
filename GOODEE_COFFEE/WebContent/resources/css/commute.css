@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+*{ margin: 0; padding: 0; }
+a{ outline: 0; text-decoration: none; }
+ul,ol,li{list-style: none; }
+img{ vertical-align: top;}
+
+form#commuteFrm{ width: 960px; height: 700px; margin: 0 auto;  box-shadow: 2px 2px 2px #f1c40f; position: relative; top:100px; }
+
+
+
+h1{ width: 100%; height:80px; line-height: 60px; color:#2D3e50; background-color: #f1c40f; padding: 10px 20px; box-sizing: border-box;}
+
+div#left_col{ width: 560px; height: 620px; float: left; background-color: #2D3e50; border-right: 2px dashed white; }
+
+div#left_col #sysdate{ text-align: center; font-size: 20px; line-height: 60px; width: 90%; height: 60px; margin: 20px 0; color: white;} 
+
+button#inquiry{ width:70px; line-height: 43px; height: 43px; position: relative; top: 1px; background-color: #f1c40f; color: black; border: 1px solid #f1c40f; box-shadow: 1px 1px white; outline-color: #2D3e50;}
+
+p.inputBox{ width: 560px; height: 60px; margin: 20px auto;  font-size: 20px; font-weight: bold; line-height: 60px;   box-sizing: border-box; padding-left: 20px;}
+
+p.inputBox label{display: block; width: 120px; height: 40px; line-height: 40px; float: left; margin: 16px 0 ;}
+
+p.inputBox input{ width: 360px; height: 40px; line-height: 40px; margin: 0; padding: 20px; box-sizing: border-box;}
+p.inputBox #staffNum{ width: 280px;}
+
+div#right_col{ width: 398px; height: 620px; background-color: #2D3e50; float: left;}
+
+#commuteFrm  div#keypad{ width: 330px; background-color: #2D3e50; float: left; border-radius: 6px; box-sizing: border-box; padding: 5px; font-weight: bold; font-size: 24px; margin: 100px 30px 20px;}
+
+#keypad > [class*=keypad]{ width: 100px; height: 50px; background-color: #2D3e50; float: left; border: 2px solid white; margin-right: 2px; margin-bottom: 5px; line-height: 50px; text-align: center; border-radius: 5px; color: white;}
+
+#keypad > #keypad_enter{ width: 65%; background-color:#2D3e50; }
+
+#keypad::after{ display: block; content: ""; clear: both;}
+
+button#regiBtn{ display: block; width: 320px; height: 80px; margin: 0 auto; margin-left:34px; font-size: 24px; background-color: #c1392b; border: 2px solid white; color: white; border-radius: 6px;}
+
+#commuteFrm > div#msg{ position: absolute; bottom: 0;left: 0; width: 100%; height: 30px; line-height: 30px; color: #2D3e50; padding: 0 10px; background-color: #f1c40f; box-sizing: border-box;}
+

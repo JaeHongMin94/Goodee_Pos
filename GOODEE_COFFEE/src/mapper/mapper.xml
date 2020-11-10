@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mapper">
+	
+	<!-- login : 로그인-->
+	<!-- 로그인 테스트 -->
+	 <select id="adminLoginCheck" resultType="String">
+	 	select a_name
+	 	from admin
+	 	where a_id = '${a_id}' and a_pwd = '${a_pwd}'
+    </select>
+    
+    <select id="staffLoginCheck" resultType="String">
+	 	select w_name
+	 	from worker
+	 	where w_id = '${w_id}' and w_pwd = '${w_id}'
+    </select>
+	<!-- //로그인 테스트 -->
+	<!-- //login : 로그인 -->
+	
+	
+	
+	<!-- payment : 메뉴불러오기 -->
+	<!-- coffeeMenu -->
+	<resultMap type="map" id="mapCoffeeMenuList">
+		<result column="category_no" property="category_no"/>
+		<result column="menu_name" property="menu_name"/>
+		<result column="price" property="price"/>
+	</resultMap>
+	
+	<select id="coffeeMenuList" parameterType="map" resultMap="mapCoffeeMenuList">
+		select 
+		category_no
+		,menu_name
+		,price
+		from menu
+		where category_no = '1'
+	</select>
+	<!-- //coffeeMenu -->
+	
+	<!-- beverageMenu -->
+	<resultMap type="map" id="mapBeverageMenuList">
+		<result column="category_no" property="category_no"/>
+		<result column="menu_name" property="menu_name"/>
+		<result column="price" property="price"/>
+	</resultMap>
+	
+	<select id="beverageMenuList" parameterType="map" resultMap="mapBeverageMenuList">
+		select 
+		category_no
+		,menu_name
+		,price
+		from menu
+		where category_no = '2'
+	</select>
+	<!-- //beverageMenu -->
+	
+	<!-- teaMenu -->
+	<resultMap type="map" id="mapTeaMenuList">
+		<result column="category_no" property="category_no"/>
+		<result column="menu_name" property="menu_name"/>
+		<result column="price" property="price"/>
+	</resultMap>
+	
+	<select id="teaMenuList" parameterType="map" resultMap="mapTeaMenuList">
+		select 
+		category_no
+		,menu_name
+		,price
+		from menu
+		where category_no = '3'
+	</select>
+	<!-- //teaMenu -->
+	
+	<!-- adeMenu -->
+	<resultMap type="map" id="mapAdeMenuList">
+		<result column="category_no" property="category_no"/>
+		<result column="menu_name" property="menu_name"/>
+		<result column="price" property="price"/>
+	</resultMap>
+	
+	<select id="adeMenuList" parameterType="map" resultMap="mapAdeMenuList">
+		select 
+		category_no
+		,menu_name
+		,price
+		from menu
+		where category_no = '4'
+	</select>
+	<!-- //adeMenu -->
+	
+	<!-- shakeMenu -->
+	<resultMap type="map" id="mapShakeMenuList">
+		<result column="category_no" property="category_no"/>
+		<result column="menu_name" property="menu_name"/>
+		<result column="price" property="price"/>
+	</resultMap>
+	
+	<select id="shakeMenuList" parameterType="map" resultMap="mapShakeMenuList">
+		select 
+		category_no
+		,menu_name
+		,price
+		from menu
+		where category_no = '5'
+	</select>
+	<!-- //shakeMenu -->
+	
+	<!-- bakeryMenu -->
+	<resultMap type="map" id="mapBakeryMenuList">
+		<result column="category_no" property="category_no"/>
+		<result column="menu_name" property="menu_name"/>
+		<result column="price" property="price"/>
+	</resultMap>
+	
+	<select id="bakeryMenuList" parameterType="map" resultMap="mapBakeryMenuList">
+		select 
+		category_no
+		,menu_name
+		,price
+		from menu
+		where category_no = '6'
+	</select>
+	<!-- //bakeryMenu -->
+	<!-- //payment : 메뉴불러오기-->
+	
+	
+	
+	
+	<!-- menu : 메뉴관리 -->
+	<!-- 관리자 - 메뉴관리 -->
+	<resultMap type="map" id="categoryList">
+		<result column="category_no" property="category_no"/>
+		<result column="category_name" property="category_name"/>
+	</resultMap>
+	
+	<select id="category" parameterType="map" resultMap="categoryList">
+		select
+			category_no
+			,category_name
+		from category
+	</select>
+	
+	<insert id="categoryInsert">
+		INSERT INTO category
+		VALUES(category_seq.NEXTVAL, #{category_name})
+	</insert>
+	
+	<delete id="categoryDelete">
+		DELETE category
+		WHERE category_name=#{category_name}
+	</delete>
+	
+	<resultMap type="map" id="menuList">
+		<result column="menu_id" property="menuID"/>
+		<result column="menu_name" property="menuName"/>
+		<result column="category_no" property="categoryNO"/>
+	</resultMap>
+	
+	<select id="menuList" parameterType="map" resultMap="menuList">
+		SELECT
+			menu_id
+			,menu_name
+			,category_no
+		FROM menu
+	</select>
+	
+	<insert id="menuInsert">
+		INSERT INTO menu
+		VALUES(menu_seq.NEXTVAL,#{menu_name},#{price},#{description,jdbcType=VARCHAR},#{category_no})
+	</insert>
+	
+	<delete id="menuDelete" parameterType="list">
+			DELETE menu
+			WHERE
+		<foreach collection="list" item="menu_id" separator="or"> 
+			menu_id=#{menu_id}
+		</foreach>
+	</delete>
+	<!-- //메뉴관리 -->
+	
+	<!-- 카테고리  -->
+	<resultMap type="map" id="mapCategoryList">
+		<result column="category_no" property="category_no"/>
+		<result column="category_name" property="category_name"/>
+	</resultMap>
+	
+	<select id="categoryList" parameterType="map" resultMap="mapCategoryList">
+		SELECT 
+			category_no, 
+			category_name 
+			FROM category
+	</select>
+	<!-- //카테고리  -->
+	<!-- //menu : 메뉴관리 -->
+	
+	
+	<!-- payment : 결제 -->
+	<resultMap type="map" id="paymentList">
+		<result column="order_id" property="order_id"/>
+		<result column="s_no" property="s_no"/>
+		<result column="order_date" property="order_date"/>
+		<result column="total_price" property="total_price"/>
+		<result column="order_state" property="order_state"/>
+		<result column="card" property="card"/>
+		<result column="cash" property="cash"/>
+	</resultMap>
+	
+	<select id="paymentList" parameterType="map" resultMap="paymentList">
+		SELECT
+			order_id
+			,s_no
+			,order_date
+			,total_price
+			,order_state
+			,card
+			,cash
+		FROM pay_order
+		WHERE order_state='Y' ORDER BY order_date DESC <!-- 결제상태가 y인것만 리스트 보여주기 -->
+	</select>
+	
+	<insert id="orderInsert">
+		INSERT INTO pay_order
+		VALUES(pay_order_seq.NEXTVAL,1000,SYSDATE,#{total_price},'Y',#{card},#{cash})
+	</insert>
+	<update id="orderUpdate"> <!-- 결제상태 : 취소로 변경 -->
+			update pay_order set
+		    	order_state = 'N'
+		  	where order_id = #{order_id}
+	</update>
+	
+	<!-- //payment : 결제 -->
+	
+	
+	<!-- 직원관리 -->
+	<insert id="staffInsert">
+		INSERT INTO worker
+		VALUES(worker_seq.NEXTVAL,#{w_name},default,#{w_phone},default,default)
+	</insert>
+	<!-- //직원관리 -->
+	
+	<!-- 직원 삭제 -->
+	<update id="staffWithdraw" >
+			UPDATE
+				worker
+			SET
+				use='N'
+			WHERE
+				w_id=#{w_id}
+	</update>
+	<!-- //직원 삭제 -->
+	
+	<!-- staffList -->
+	<resultMap type="map" id="mapStaffList">
+		<result column="w_id" property="w_id"/>
+		<result column="w_name" property="w_name"/>
+		<result column="w_phone" property="w_phone"/>
+		<result column="indate" property="indate"/>
+		<result column="use" property="use"/>
+	</resultMap>
+	
+	<select id="staffList" parameterType="map" resultMap="mapStaffList">
+		select 
+			w_id
+			,w_name
+			,w_phone
+			,indate
+			,use
+		from worker
+	</select>
+	<!-- //staffList -->
+	
+	<!-- staffSelect -->
+	<resultMap type="com.goodeecoffee.gc.staff.dto.StaffDTO" id="mapStaffSelect">
+		<result column="w_id" property="w_id"/>
+		<result column="w_name" property="w_name"/>
+		<result column="w_phone" property="w_phone"/>
+	</resultMap>
+	
+	<select id="staffSelect" parameterType="_int" resultMap="mapStaffSelect">
+		select 
+			w_id
+			,w_name
+			,w_phone
+		from worker
+		where w_id=#{w_id}
+	</select>
+	<!-- //staffSelect -->
+	
+	<!-- staffUpdate -->
+	<update id="staffUpdate">
+		UPDATE worker
+		SET w_name=#{w_name}, w_phone=#{w_phone}
+		WHERE w_id=#{w_id}		
+	</update>
+	<!-- //staffUpdate -->
+	
+	
+	<!-- 회원관리 -->
+	
+	<!-- 회원등록 -->
+	<insert id="memberInsert">
+		INSERT INTO member
+		VALUES(member_seq.NEXTVAL,#{m_name},default,#{m_phone},default,default,default)
+	</insert>
+	
+	
+	<!-- 회원 삭제 -->
+	<update id="memberWithdraw" >
+			UPDATE
+				member
+			SET
+				use='Y'
+			WHERE
+				m_id=#{m_id}
+	</update>
+	
+	
+	<!-- 회원리스트 -->
+	<resultMap type="map" id="mapMemberList">
+		<result column="m_id" property="m_id"/>
+		<result column="m_name" property="m_name"/>
+		<result column="m_phone" property="m_phone"/>
+		<result column="point" property="point"/>
+		<result column="total" property="total"/>
+		<result column="indate" property="indate"/>
+		<result column="use" property="use"/>
+	</resultMap>
+	
+	<select id="memberList" parameterType="map" resultMap="mapMemberList">
+		select 
+			m_id
+			,m_name
+			,m_phone
+			,indate
+			,use
+		from member
+	</select>
+	
+	
+	<!-- 회원선택 -->
+	<resultMap type="com.goodeecoffee.gc.member.dto.MemberDTO" id="mapMemberSelect">
+		<result column="m_id" property="m_id"/>
+		<result column="m_name" property="m_name"/>
+		<result column="m_phone" property="m_phone"/>
+		<result column="total" property="total"/>
+		<result column="point" property="potin"/>
+	</resultMap>
+	
+	<select id="memberSelect" parameterType="_int" resultMap="mapMemberSelect">
+		select 
+			n_id
+			,n_name
+			,n_phone
+			,total
+			,point
+		from member
+		where m_id=#{m_id}
+	</select>
+	
+	<!-- 회원정보수정 -->
+	<update id="memberUpdate">
+		UPDATE member
+		SET m_name=#{m_name}, m_phone=#{m_phone}
+		WHERE m_id=#{m_id}		
+	</update>
+</mapper>

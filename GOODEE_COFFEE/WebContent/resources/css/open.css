@@ -1,0 +1,156 @@
+body {background-color: #2D3E50; height:750px;}
+
+#display_wrap{
+    position: absolute;
+    /*left: 100px;*/
+    left: 80px; top: 70px;
+    width: 100%; height: 100%;
+}
+
+#display_wrap #left{
+    float: left;
+    width: 50%; height: 650px;
+}
+
+#display_wrap #left #tab_kind{
+    width:93%; height: 80px;
+    background-color: #2D3E50;
+    display: inline-block;
+    margin: 10px 0 0 26px;
+}
+
+/*#tab_kind .tab_wrap{
+	display: inline-block;
+	float: left;
+	width:100%; height: 80px;
+}*/
+
+.tab_wrap .tab_link{
+	height: 80px;
+	display: inline-block;
+	float: left;
+}
+
+.tab-link input[type="button"]{
+    width: 85%; height: 80px;
+    /*margin: 5px 3px 0 3px;*/
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #f1c40f;
+    border: none;
+    border-radius: 0.2em;
+    display: inline-block;
+}
+
+.tab-link input[type="button"]:nth-of-type(1){margin-left: 8px; float: left;}
+
+section {height: 370px;}
+
+section button{
+    width: 115px; height: 80px;
+    float: left;
+    margin: 3px 3px;
+    border-radius: 0.2em;
+    border: none;
+}
+
+.tab-content{
+    height: 350px;
+	display: none;
+	background: #2D3E50;
+    padding: 15px;
+}
+
+.tab-content.current{
+	display: inherit;
+}
+
+#manage_btn .main_btn{
+    width: 80%; height: 150px;
+    float: left;
+    background-color: #2D3E50;
+    border-right: 1px solid #fff;
+}
+
+#manage_btn .aside_btn{
+    width: 19%; height: 150px;
+    float: right;
+}
+
+#manage_btn .aside_btn input[type=button]{
+    width: 115px; height: 145px;
+    margin-left: 18px;
+    border-radius: 0.2em;
+    border: none;
+    font-size: 18px;
+    color: #fff;
+    background-color: #516f8f;
+    margin-top: 2px;
+}
+
+#manage_btn .main_btn .top{width: 100%; height: 50%;}
+#manage_btn .main_btn .bottom{width: 100%; height: 50%;}
+
+#manage_btn .main_btn .top input[type=button]{
+    float: left;
+    width: 165px; height: 70px;
+    border: none;
+    border-radius: 0.2em;
+    margin: 3px 27px 3px 10px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #516f8f;
+}
+
+#manage_btn .main_btn .top li:first-child input[type=button]{background-color: #f1c40f;}
+
+#manage_btn .main_btn .bottom input[type=button]{
+    float: left;
+    width: 165px; height: 70px;
+    border: none;
+    border-radius: 0.2em;
+    margin: 3px 27px 3px 10px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #516f8f;
+}
+
+#manage_btn .main_btn .bottom li:last-child input[type=button]{background-color: #c1392b;}
+
+#display_wrap #right{
+    float: right;
+    width: 50%; height: 650px;
+}
+
+#right .selected_menu{
+    width: 650px; height: 380px;
+    background-color: #fff;
+    margin-top: 5px;
+    border: 1px solid #fff;
+    overflow: auto;
+}
+
+.selected_menu table{
+    width: 100%;
+    background-color: #fff;
+    text-align: center;
+    font-size: 22px;
+}
+
+.selected_menu table tr th{padding: 10px 0; background-color: rgb(201, 201, 201);}
+
+.selected_menu table tr td{font-size: 20px; padding: 5px 0;}
+
+.selected_menu table tr td:first-child{text-align: left;}
+
+
+#right .payment p{margin: 5px 0;}
+
+.payment .total_money{padding:7px 0 0 20px;}
+
+.payment .calc_money{padding:7px 0 0 20px;}
+
+.calc_money p:first-child{color: #c1392b;}
+
+.calc_money p:last-child{color: #c1392b; font-weight: bold;}

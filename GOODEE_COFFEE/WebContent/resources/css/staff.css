@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+
+/*■■■■■■■■■■■■■■■■■■■■■■■■■ 공통 ■■■■■■■■■■■■■■■■■■■■■■■■■*/
+h2.title{ margin:40px 0 60px; font-size:2em; }
+p.inputBox{ margin:50px 0;}
+label.labelTitle{ display:block; width:80px; height:40px; float:left; line-height:40px; font-weight:bold; }
+input.infoInput{ display:block; width:430px; height:40px; float:left; margin-left:20px; border:1px solid #ccc; border-bottom:1px solid #ccc; box-sizing:border-box; padding:10px; }
+button.btn{ margin-top:60px; float:left; width:260px; height:50px; border:0; font-size:20px; font-weight:500; }
+button.resetBtn{ margin-right:10px;}
+
+
+/*■■■■■■■■■■■■■■■■■■■■■■■■■ staffList ■■■■■■■■■■■■■■■■■■■■■■■■■*/
+div#saffList{ width: 1000px; height: 560px; margin: 0 auto; background-color: white; color: #2D3e50; position:relative; top:100px; border:
+1px solid #2D3e50; }
+
+div#saffList h1{ text-align: center; height: 60px; line-height: 60px; background-color: #2D3e50; color: white; box-sizing: border-box;}
+div#saffList table{ width: 100%; border-collapse: collapse; border:1px solid #2D3e50; margin-top: 60px;}
+
+div#saffList table tr{ height: 40px;}
+
+div#saffList table th,td{ box-sizing: border-box; padding: 10px;}
+
+p#page{ text-align: center; font-weight: bold; color: black; margin-top:20px; }
+ 
+#ListbtnBox{ float: right; margin-top: 50px;margin-right: 10px;}
+#ListbtnBox button{ width: 120px; height: 30px; border-radius: 6px; color:white; }
+button#movetoWithdraw{ background-color: #c1392b; border: 1px solid white;}
+button#movetoAlter{ background-color: #2D3e50; border: 1px solid white;}
+button#movetoRegi{ background-color: #2D3e50; border: 1px solid white;}
+
+
+/*■■■■■■■■■■■■■■■■■■■■■■■■■ staff_register ■■■■■■■■■■■■■■■■■■■■■■■■■*/
+form#staffRegiFrm{ width:600px;  height:600px; margin:0 auto; box-sizing:border-box; padding:30px; border:1px dashed #2D3E50; background-color:#F1C40F; position:relative; top:160px; }
+button#staffRegiBtn{ background-color:#2D3E50; color:white; }
+
+/*■■■■■■■■■■■■■■■■■■■■■■■■■ staff_alterInto ■■■■■■■■■■■■■■■■■■■■■■■■■*/
+form#alterFrm{ width:600px; height:600px; margin:0 auto; box-sizing:border-box; padding:30px; border:1px dashed #2D3E50; background-color:#F1C40F; position:relative; top:160px; }
+button#staffInfoAlterBtn{ background-color:#2D3E50; color:white; }
+
+/*■■■■■■■■■■■■■■■■■■■■■■■■■ staff_withdraw ■■■■■■■■■■■■■■■■■■■■■■■■■*/
+form#withdrawFrm{ width:600px; height:600px; margin:0 auto; box-sizing:border-box; padding:30px; border:1px dashed #2D3E50; background-color:#F1C40F; position:relative; top:160px;}
+button#staffWithdrawBtn{ background-color:#2D3E50; color:white; }

@@ -1,0 +1,100 @@
+/* PC 버전*/
+@media screen and (min-width:1024px){
+
+img#prevBtn{ display: none; }
+div#logo{ width: 50%; height: 800px; float: left;}
+div#logo img{ display: block; margin: 1% auto; padding: 26% 0; width:70%; height:20p;}
+
+h2#mobileLogin{ display: none;}
+
+/* form */
+form#loginFrm{ width: 50%; height: 800px; background-color: rgb(241,196,15); float: left; padding: 80px 120px; box-sizing: border-box;}
+form#loginFrm h2#pcLogin{ font-size: 40px; font-weight: 900; letter-spacing: -3px; margin: 70px 0 30px; }
+
+
+input{ margin: 10px 0;}
+input#userId{ width: 100%; height: 50px; box-sizing: border-box; padding: 10px; border: 1px solid #ddd;}
+
+input#userPwd{ width: 100%; height: 50px; box-sizing: border-box; padding: 10px; border: 1px solid #ddd; margin-bottom: 20px;}
+
+input#userIdSave + label{ font-size: 18px; margin-left: 10px;; color: #444; font-weight: 700;}
+
+ul#plusInfo{ float: right;}
+ul#plusInfo li{ float:left; margin-left: 20px; font-size: 18px; }
+ul#plusInfo li a{ color: #444; font-weight: bold;}
+div#clear{ clear: both;}
+
+input#loginSubmit{ width: 100%; height: 70px; margin-top: 40px; background-color: rgb(15,53,90); color: white; border: none; border-radius: 6px; font-size: 20px; font-weight: bold;} 
+
+/* footer */
+footer{ width: 100%; height: 300px; background-color:  rgb(15,53,90);  float:left; 
+left: 0; bottom: 0;}
+
+}
+
+/* Tablet 버전*/
+@media screen and (min-width:640px) and (max-width:1023px){
+    img#prevBtn{  width: 30px; height: 30px; margin: 10px;}
+    div#logo img{ display: block; margin: 60px auto 20px;  height: 60px;}
+        
+    /* form */
+    form#loginFrm{ width: 100%; height: 500px; background-color: rgb(241,196,15); float: left; padding: 50px 10px; box-sizing: border-box;}
+    
+    h2#mobileLogin{ font-size: 32px; font-weight: 900; letter-spacing: -3px; margin-bottom: 30px; text-align: center;}
+    
+    form#loginFrm h2#pcLogin{ display: none; }
+    
+    input{ margin: 10px 0;}
+    input#userId{ width: 100%; height: 50px; box-sizing: border-box; padding: 10px; border: 1px solid #ddd;}
+        
+    input#userPwd{ width: 100%; height: 50px; box-sizing: border-box; padding: 10px; border: 1px solid #ddd; margin-bottom: 20px;}
+     
+    input#userIdSave { float: left; margin-left: 76%;}
+    input#userIdSave + label{ float: left; font-size: 18px; margin-left: 10px;; color: #444; font-weight: 700;}
+    
+    ul#plusInfo{ clear: both; float: right; margin-right: 2%; margin-top: 2%;}
+    ul#plusInfo li{ float:left; margin-left: 20px; font-size: 18px; }
+    ul#plusInfo li a{ color: #444; font-weight: bold;}
+    div#clear{ clear: both;}
+        
+    input#loginSubmit{ width: 100%; height: 70px; margin-top: 40px; background-color:  rgb(15,53,90);  color: white; border: none; border-radius: 6px; font-size: 20px; font-weight: bold;} 
+        
+    /* footer */
+    footer{ width: 100%; height: 200px; background-color:  rgb(15,53,90);  float:left; 
+    left: 0; bottom: 0;}
+        
+    }
+
+/* Mobile 버전*/
+@media screen and (max-width:639px){
+img#prevBtn{  width: 30px; height: 30px; margin: 10px;}
+
+div#logo img{ display: block; margin: 60px auto 20px;  height: 60px;}
+    
+/* form */
+form#loginFrm{ width: 100%; height: 500px; background-color: rgb(241,196,15); float: left; padding: 50px 10px; box-sizing: border-box;}
+
+h2#mobileLogin{ font-size: 32px; font-weight: 900; letter-spacing: -3px; margin-bottom: 30px; text-align: center;}
+
+form#loginFrm h2#pcLogin{ display: none; }
+
+input{ margin: 10px 0;}
+input#userId{ width: 100%; height: 50px; box-sizing: border-box; padding: 10px; border: 1px solid #ddd;}
+    
+input#userPwd{ width: 100%; height: 50px; box-sizing: border-box; padding: 10px; border: 1px solid #ddd; margin-bottom: 20px;}
+ 
+input#userIdSave { float: left; margin-left: 68%;}
+input#userIdSave + label{ float: left; font-size: 18px; margin-left: 10px;; color: #444; font-weight: 700;}
+
+ul#plusInfo{ clear: both; float: right; margin-right: 2%; margin-top: 2%;}
+ul#plusInfo li{ float:left; margin-left: 20px; font-size: 18px; }
+ul#plusInfo li a{ color: #444; font-weight: bold;}
+div#clear{ clear: both;}
+    
+input#loginSubmit{ width: 100%; height: 70px; margin-top: 40px; background-color:  rgb(15,53,90);  color: white; border: none; border-radius: 6px; font-size: 20px; font-weight: bold;} 
+    
+/* footer */
+footer{ width: 100%; height: 200px; background-color:  rgb(15,53,90);  float:left; 
+left: 0; bottom: 0;}
+    
+}

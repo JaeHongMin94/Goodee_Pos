@@ -1,0 +1,22 @@
+s@charset "utf-8";
+
+*{ margin: 0; padding: 0; }
+a{ outline: 0; text-decoration: none; }
+ul,ol,li{list-style: none; }
+img{ vertical-align: top;}
+
+form#savingFrm{ width: 600px; height: 400px; margin: 0 auto; background-color: #f1c40f;  border: 1px solid #2D3e50; position:relative; top:200px; } 
+
+#savingFrm h1{ width: 100%; height: 60px; background-color: white; line-height: 60px;}
+#savingFrm h1 img{ width: 30px; height: 30px; line-height: 30px; margin: 16px 0 16px 10px;}
+
+form#savingFrm h2{ margin: 30px 20px;}
+p.inputBox{ margin: 20px;}
+p.inputBox:nth-child(1){ margin-top: 50px;}
+
+p.inputBox label{ display: block; width: 60px; height: 30px; line-height: 30px; float: left; font-size: 16px; font-weight: bold; margin-left: 10px;}
+p.inputBox input{ width: 300px; height: 30px;box-sizing: border-box; padding: 10px; outline-color: #f1c40f;}
+
+div#btnBox button{ width: 186px; height: 50px; border: none; box-shadow: 1px 1px 1px white; margin-top: 30px;  color: white; font-weight: bold; font-size: 16px;}
+button#resetBtn{ background-color: #c1392b; margin-left: 30px;  outline-color: #c1392b;}
+button#submitBtn{ background-color: #2D3e50;   outline-color: #2D3e50;}  
